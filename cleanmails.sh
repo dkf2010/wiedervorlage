@@ -1,9 +1,9 @@
 #!/bin/sh
 
 BASEPATH="/home/kit/users/dennis"
-
 TIME=`date +%H`
 WEEKDAY=`date +%u`
+
 
 #Spam aufräumen
 find "${BASEPATH}/.Junk/cur/" -type f -exec mv {} "${BASEPATH}/.Spam/cur/" \;
@@ -11,7 +11,6 @@ find "${BASEPATH}/.Spam/cur/" -mtime +60 -delete
 
 #Archiv aufräumen
 find "${BASEPATH}/._Wiedervorlage.9_Archiv/cur" -mtime +60 -delete
-
 
 
 #Wiedervorlage
@@ -54,4 +53,3 @@ find "${BASEPATH}/._Wiedervorlage.3_2w/cur/" -type f -ctime +13 -exec "~/bin/mvm
 
 #1 Monat
 find "${BASEPATH}/._Wiedervorlage.4_1m/cur/" -type f -ctime +29 -exec "~/bin/mvmails.sh" {} \;
-

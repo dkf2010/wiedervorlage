@@ -1,7 +1,6 @@
 #!/bin/sh
 
 BASEPATH="/home/kit/users/dennis"
-
 logfile="/home/kit/bin/logs/mvmails.log"
 
 echo "`date` ---" >> $logfile
